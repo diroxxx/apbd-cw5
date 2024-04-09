@@ -1,4 +1,7 @@
-﻿namespace App5.Endpoints;
+﻿using App5.Database;
+using App5.Models;
+
+namespace App5.Endpoints;
 
 public static class AnimalEndpoints
 {
@@ -7,12 +10,13 @@ public static class AnimalEndpoints
         //minimal api
         app.MapGet("/animals/{id}", (int id) =>
         {
-            return Results.Ok(id);
+            var animals = StaticData.Animals;
+            return Results.Ok(animals);
 
         });
-        app.MapPost("/animals", () =>
+        app.MapPost("/animals", (Animal Animal) =>
         {
-            return Results.Created();
+            return Results.Created("", Animal);
         });
     }
 }
