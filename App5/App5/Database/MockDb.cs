@@ -8,8 +8,8 @@ public class MockDb
 
     public MockDb()
     {
-        Animals.Add(new Animal());
-        Animals.Add(new Animal());
-        Animals.Add(new Animal());
+        Animals.Add(new Animal(1,"Antylopa", "ssak", 150, "brazowa"));
+        Animals.Add(new Animal(2, "krowa", "ssak", 700, "biala"));
+        Animals.Add(new Animal(3, "pies", "ssak", 40, "czarny"));
     }
 }

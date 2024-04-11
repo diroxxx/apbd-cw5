@@ -10,8 +10,8 @@ public static class AnimalEndpoints
         //minimal api
         app.MapGet("/animals/{id}", (int id) =>
         {
-            var animals = StaticData.Animals;
-            return Results.Ok(animals);
+            // var animals = StaticData.Animals;
+            // return Results.Ok(animals);
 
         });
         app.MapPost("/animals", (Animal Animal) =>

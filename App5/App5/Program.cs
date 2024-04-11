@@ -21,11 +21,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 //minimal api
-app.UseHttpsRedirection();
+// app.UseHttpsRedirection();
 
 //controlers
 app.MapControllers();
 
-app.MapAnimalEndpoints();
+// app.MapAnimalEndpoints();
 app.Run();
 
